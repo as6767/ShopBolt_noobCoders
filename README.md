@@ -1,4 +1,4 @@
-# DP_2
+# ShopBolt_noobCoder
 Design Project 2
 
 Project Title: 
