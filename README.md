@@ -1,7 +1,7 @@
 # ShopBolt_noobCoder
 Design Project 2
 
-Project Title: 
+Project Title: \n
 ShopBolt – Your One-Stop Marketplace for Electrical Accessories, Books & Rentals
 Problem Statement:
 People in Bangladesh need a better online marketplace for buying electrical accessories, books, and renting cameras & other accessories. Existing platforms do not combine these categories effectively. Many professionals and hobbyists prefer renting cameras instead of buying. ShopBolt aims to solve these problems by creating a secure and user-friendly e-commerce platform for both buyers and sellers.
