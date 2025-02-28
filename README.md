@@ -74,6 +74,6 @@ Positive impact on the adoption of online shopping for electrical accessories an
 #### ✔️ Database: Xampp
 
 ### ⛎ References:
-IEEE Standard for E-Commerce System Security Best Practices, IEEE Xplore.
-Online Market Trends in Bangladesh, Journal of Digital Commerce, 2023.
+IEEE Standard for E-Commerce System Security Best Practices, IEEE Xplore.<br>
+Online Market Trends in Bangladesh, Journal of Digital Commerce, 2023.<br>
 Rokomari.com Case Study on E-Commerce Success in Bangladesh.
