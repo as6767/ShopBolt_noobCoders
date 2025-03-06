@@ -1,0 +1,256 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url(/Projrct1/assets/images/bg.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+}
+
+.cname {
+    font-size: 2em;
+    color: #fff;
+    user-select: none;
+}
+
+.navbar a {
+    position: relative;
+    font-size: 1.1em;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;
+}
+
+.navbar a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: #fff;
+    border-radius: 5px;
+    transform: scaleX(0);
+    transition: transform .5s;
+}
+
+.navbar a:hover::after {
+    transform-origin: center;
+    transform: scaleX(1);
+}
+
+.navbar .navbtnlogin {
+    width: 130px;
+    height: 50px;
+    background: transparent;
+    border: 2px solid #fff;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1em;
+    color: #fff;
+    font-weight: 500;
+    margin-left: 40px;
+    transition: .5s;
+}
+
+.navbar .navbtnlogin:hover {
+    background: #fff;
+    color: black;
+}
+
+/* Initial state of loginframe */
+.loginframe {
+    visibility: hidden; /* Initially hidden */
+    opacity: 0;
+    transition: opacity 0.3s ease, visibility 0.3s ease; /* Smooth transition */
+    position: relative;
+    width: 400px;
+    height: 440px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .5);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* When .show class is added, make it visible */
+.loginframe.show {
+    visibility: visible;
+    opacity: 1;
+}
+
+.loginframe.active {
+    height: 520px;
+}
+
+.loginframe .form.login {
+    width: 100%;
+    padding: 40px;
+    transform: translateX(0);
+}
+
+.loginframe.active .form.login {
+    transform: translateX(400px);
+}
+
+.loginframe .form.register {
+    position: absolute;
+    transform: translateX(400px);
+}
+
+.loginframe.active .form.register {
+    transform: translateX(0);
+}
+
+/* Close icon styles */
+.loginframe .closeicon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45px;
+    height: 45px;
+    background: #162938;
+    font-size: 2em;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 20px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+/* Login form title */
+.form.login h2 {
+    font-size: 2em;
+    color: rgb(46, 43, 43);
+    text-align: center;
+}
+
+.logininput {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid #162938;
+    margin: 30px 0;
+}
+
+.logininput label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color: #162938;
+    font-weight: 500;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.logininput input:focus~label,
+.logininput input:valid~label {
+    top: -5px;
+}
+
+.logininput input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: #162938;
+    font-weight: 600;
+    padding: 0 35px 0 5px;
+}
+
+.logininput .icon {
+    position: absolute;
+    right: 8px;
+    font-size: 1.2em;
+    color: #162938;
+    line-height: 57px;
+}
+
+/* Forgot password and remember me */
+.rememberme-forgot {
+    font-size: .9em;
+    color: #9b9ba4;
+    font-weight: 500;
+    margin: -15px 0 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.rememberme-forgot label input {
+    accent-color: #162938;
+    margin-right: 3px;
+}
+
+.rememberme-forgot a {
+    color: #93a5b3;
+    text-decoration: none;
+}
+
+.rememberme-forgot a:hover {
+    text-decoration: underline;
+}
+
+/* Submit button */
+.btnsubmit {
+    width: 100%;
+    height: 45px;
+    background: black;
+    border: none;
+    outline: #fff;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    color: #fff;
+    font-weight: 500;
+}
+
+/* Register new account message */
+.registernewid {
+    font-size: .9em;
+    color: #c1c3c4;
+    text-align: center;
+    font-weight: 500;
+    margin: 25px 0 10px;
+}
+
+.registernewid p a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.registernewid p a:hover {
+    text-decoration: underline;
+}
