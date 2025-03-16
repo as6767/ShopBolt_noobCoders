@@ -9,121 +9,59 @@
     <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/easy.css">
-    <link rel="stylesheet" href="assets/css/cart.css">
+    <link rel="stylesheet" href="assets/css/login.css">
     <!-- <link rel="stylesheet" href="/Projrct1/assets/css/login.css"> -->
 </head>
 <body>
 
-            <!-- New Nav-->
-            <header>
-                <nav class="navbar">
-                    <a href="/Projrct1/home.html">Home</a>
-                    <a href="about.html">About</a>
-                    <a href="shop.html">Shop</a>
-                    <a href="contact.html">Contact</a>
-                    <a href="login.html">Sign In</a>
-                </nav>
-                <a href="home.html" class="nav_logo">
-                  <img src="/Projrct1/assets/images/logo.png" alt="Logo">
-                </a>
-            </header>
+    <!-- New Nav-->
+    <header>
+        <nav class="navbar">
+            <a href="/Projrct1/home.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="shop.html">Shop</a>
+            <a href="contact.html">Contact</a>
+            <a href="login.html">Sign In</a>
+        </nav>
+        <a href="home.html" class="nav_logo">
+          <img src="/Projrct1/assets/images/logo.png" alt="Logo">
+        </a>
+    </header>
 
-        <!--cart-->
-<section class="cart container my-5 py-5">
-    <div class="container mt-5">
-        <h2 class="font-weight-bold">Your Cart</h2>
-        <hr>
-    </div>
-    <table class="mt-5 pt-5">
-        <tr>
-            <th>Product</th>
-            <th>Quantity</th>
-            <th>Subtotal</th>
-        </tr>
-        <tr>
-            <td>
-                <div class="product-info">
-                    <img src="/Projrct1/assets/images/Product/macbook.png" alt="Macbook M1">
-                    <div>
-                        <p>Macbook M1</p>
-                        <small><span>$</span>690</small>
-                        <br>
-                        <a class="remove-btn" href="#">Remove</a>
-                    </div>
+    <!--register-->
+    <section class="my-5 py-5">
+        <div class="container text-center mt-3 pt-5">
+            <h2 class="form-weigth-bold">Register</h2>
+            <hr class="mx-auto">
+        </div>
+
+        <div class="mx-auto container">
+            <form id="register-form">
+                <div class="form-group">
+                    <label>Name</label>
+                    <input type="text" class="form-control" id="register-name" name="name" placeholder="Name" required>
                 </div>
-            </td>
-            <td>
-                <input type="number" value="1" min="1">
-                <a class="edit-btn">Edit</a>
-            </td>
-            <td>
-                <span class="product-price">$690</span>
-            </td>
-        </tr>
-
-        <tr>
-            <td>
-                <div class="product-info">
-                    <img src="/Projrct1/assets/images/Product/macbook.png" alt="Macbook M1">
-                    <div>
-                        <p>Macbook M1</p>
-                        <small><span>$</span>690</small>
-                        <br>
-                        <a class="remove-btn" href="#">Remove</a>
-                    </div>
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="text" class="form-control" id="register-email" name="email" placeholder="Email" required>
                 </div>
-            </td>
-            <td>
-                <input type="number" value="1" min="1">
-                <a class="edit-btn">Edit</a>
-            </td>
-            <td>
-                <span class="product-price">$690</span>
-            </td>
-        </tr>
-
-        <tr>
-            <td>
-                <div class="product-info">
-                    <img src="/Projrct1/assets/images/Product/macbook.png" alt="Macbook M1">
-                    <div>
-                        <p>Macbook M1</p>
-                        <small><span>$</span>690</small>
-                        <br>
-                        <a class="remove-btn" href="#">Remove</a>
-                    </div>
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" class="form-control" id="register-password" name="password" placeholder="Password" required>
                 </div>
-            </td>
-            <td>
-                <input type="number" value="1" min="1">
-                <a class="edit-btn">Edit</a>
-            </td>
-            <td>
-                <span class="product-price">$690</span>
-            </td>
-        </tr>
-    </table>
-
-    <!--Total-->
-    <div class="cart-total">
-        <table>
-            <tr>
-                <td>Subtotal</td>
-                <td>$690</td>
-            </tr>
-            <tr>
-                <td>Total</td>
-                <td>$690</td>
-            </tr>
-        </table>
-    </div>
-
-    <!--Checkout Button-->
-    <div class="checkout-container">
-        <button class="btn checkout-btn">CHECKOUT</button>
-    </div>
-
-    
+                <div class="form-group">
+                    <label>Confirm Password</label>
+                    <input type="password" class="form-control" id="register-confirm-password" name="confirmPassword" placeholder="Confirm Password" required>
+                </div>
+                <div class="form-group">
+                    <input type="submit" class="btn" id="register-btn" value="Register">
+                </div>
+                <div class="form-group">
+                    <a id="login-url" class="btn">Do you have an account? Login</a>
+                </div>
+            </form>
+        </div>
+    </section>    
 </section>
 
         <!-- Footer -->
