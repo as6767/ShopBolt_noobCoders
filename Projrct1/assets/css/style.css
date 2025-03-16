@@ -128,32 +128,7 @@ h5{
     color: #d8d8d8;
 }
 
-/* .navbar{
-    font-size: 20px;
-    padding-top: 10px !important;
-    padding-bottom: 10px !important;
-    top: 0;
-    left: 0;
-}
-.nav-logo{
-    height: 100px;
-    width: 100px;
-}
 
-.navbar .nav-link {
-    padding: 0 20px;
-    color: black;
-    transition: 0.4s ease;
-}
-
-.navbar .nav-link:hover,
-.navbar i:hover {
-    color: coral; 
-}
-
-.navbar .nav-link.active {
-    color: black; 
-} */
 
 @media screen and (max-width: 540px){
     .nav-buttons{

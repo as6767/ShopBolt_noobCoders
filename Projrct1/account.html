@@ -9,125 +9,60 @@
     <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/easy.css">
-    <link rel="stylesheet" href="assets/css/cart.css">
-    
+    <link rel="stylesheet" href="assets/css/account.css">
     <!-- <link rel="stylesheet" href="/Projrct1/assets/css/login.css"> -->
 </head>
 <body>
 
-            <!-- New Nav-->
-            <header>
-                <nav class="navbar">
-                    <a href="/Projrct1/home.html">Home</a>
-                    <a href="about.html">About</a>
-                    <a href="shop.html">Shop</a>
-                    <a href="contact.html">Contact</a>
-                    <a href="login.html">Sign In</a>
-                    <a href="account.html">Account</a>
-                    <a href="cart.html">Cart</a>
-                </nav>
-                <a href="home.html" class="nav_logo">
-                  <img src="/Projrct1/assets/images/logo.png" alt="Logo">
-                </a>
-            </header>
+    <!-- New Nav-->
+    <header>
+        <nav class="navbar">
+            <a href="/Projrct1/home.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="shop.html">Shop</a>
+            <a href="contact.html">Contact</a>
+            <a href="login.html">Sign In</a>
+            <a href="account.html">Account</a>
+            <a href="cart.html">Cart</a>
+        </nav>
+        <a href="home.html" class="nav_logo">
+          <img src="/Projrct1/assets/images/logo.png" alt="Logo">
+        </a>
+    </header>
 
-        <!--cart-->
-<section class="cart container my-5 py-5">
-    <div class="container mt-5">
-        <h2 class="font-weight-bold">Your Cart</h2>
-        <hr>
-    </div>
-    <table class="mt-5 pt-5">
-        <tr>
-            <th>Product</th>
-            <th>Quantity</th>
-            <th>Subtotal</th>
-        </tr>
-        <tr>
-            <td>
-                <div class="product-info">
-                    <img src="/Projrct1/assets/images/Product/macbook.png" alt="Macbook M1">
-                    <div>
-                        <p>Macbook M1</p>
-                        <small><span>$</span>690</small>
-                        <br>
-                        <a class="remove-btn" href="#">Remove</a>
-                    </div>
+    <!--account info-->
+    <section class="my-5 py-5">
+        <div class="row container mx-auto">
+            <div class="text-center mt-3 pt-5 col-lg-6 col-md-12 col-sm-12">
+                <h3 class="font-weight-bold"> Account info</h3>
+                <hr class="mx-auto">
+                <div class="account-info">
+                    <p>Name<span>Jhon</span></p>
+                    <p>Email<span>jhon@gmail.com</span></p>
+                    <p><a href="" id="order-btn">Your order</a></p>
+                    <p><a href="" id="logout-btn">Logout</a></p>
                 </div>
-            </td>
-            <td>
-                <input type="number" value="1" min="1">
-                <a class="edit-btn">Edit</a>
-            </td>
-            <td>
-                <span class="product-price">$690</span>
-            </td>
-        </tr>
+            </div>
 
-        <tr>
-            <td>
-                <div class="product-info">
-                    <img src="/Projrct1/assets/images/Product/macbook.png" alt="Macbook M1">
-                    <div>
-                        <p>Macbook M1</p>
-                        <small><span>$</span>690</small>
-                        <br>
-                        <a class="remove-btn" href="#">Remove</a>
+            <div class="col-lg-6 col-md-12 col-sm-12">
+                <form action="" id="account-form">
+                    <h3>Change Password</h3>
+                    <hr class="mx-auto">
+                    <div class="form-group">
+                        <label>Password</label>
+                        <input type="password" class="form-control" id="account-password" name="password" placeholder="Password" required>
                     </div>
-                </div>
-            </td>
-            <td>
-                <input type="number" value="1" min="1">
-                <a class="edit-btn">Edit</a>
-            </td>
-            <td>
-                <span class="product-price">$690</span>
-            </td>
-        </tr>
-
-        <tr>
-            <td>
-                <div class="product-info">
-                    <img src="/Projrct1/assets/images/Product/macbook.png" alt="Macbook M1">
-                    <div>
-                        <p>Macbook M1</p>
-                        <small><span>$</span>690</small>
-                        <br>
-                        <a class="remove-btn" href="#">Remove</a>
+                    <div class="form-group">
+                        <label>Confirm Password</label>
+                        <input type="password" class="form-control" id="account-password-confirm" name="confirmPassword" placeholder="Password" required>
                     </div>
-                </div>
-            </td>
-            <td>
-                <input type="number" value="1" min="1">
-                <a class="edit-btn">Edit</a>
-            </td>
-            <td>
-                <span class="product-price">$690</span>
-            </td>
-        </tr>
-    </table>
-
-    <!--Total-->
-    <div class="cart-total">
-        <table>
-            <tr>
-                <td>Subtotal</td>
-                <td>$690</td>
-            </tr>
-            <tr>
-                <td>Total</td>
-                <td>$690</td>
-            </tr>
-        </table>
-    </div>
-
-    <!--Checkout Button-->
-    <div class="checkout-container">
-        <button class="btn checkout-btn">CHECKOUT</button>
-    </div>
-
-    
-</section>
+                    <div class="form-group">
+                        <input type="submit" value="Change Password" class="btn" id="change-pass-btn">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
 
         <!-- Footer -->
       <footer id="contact">

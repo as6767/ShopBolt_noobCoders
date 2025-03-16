@@ -9,128 +9,67 @@
     <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/easy.css">
-    <link rel="stylesheet" href="assets/css/cart.css">
-    
+    <link rel="stylesheet" href="assets/css/checkout.css">
     <!-- <link rel="stylesheet" href="/Projrct1/assets/css/login.css"> -->
 </head>
 <body>
 
-            <!-- New Nav-->
-            <header>
-                <nav class="navbar">
-                    <a href="/Projrct1/home.html">Home</a>
-                    <a href="about.html">About</a>
-                    <a href="shop.html">Shop</a>
-                    <a href="contact.html">Contact</a>
-                    <a href="login.html">Sign In</a>
-                    <a href="account.html">Account</a>
-                    <a href="cart.html">Cart</a>
-                </nav>
-                <a href="home.html" class="nav_logo">
-                  <img src="/Projrct1/assets/images/logo.png" alt="Logo">
-                </a>
-            </header>
+    <!-- New Nav-->
+    <header>
+        <nav class="navbar">
+            <a href="/Projrct1/home.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="shop.html">Shop</a>
+            <a href="contact.html">Contact</a>
+            <a href="login.html">Sign In</a>
+            <a href="account.html">Account</a>
+            <a href="cart.html">Cart</a>
+        </nav>
+        <a href="home.html" class="nav_logo">
+          <img src="/Projrct1/assets/images/logo.png" alt="Logo">
+        </a>
+    </header>
 
-        <!--cart-->
-<section class="cart container my-5 py-5">
-    <div class="container mt-5">
-        <h2 class="font-weight-bold">Your Cart</h2>
-        <hr>
-    </div>
-    <table class="mt-5 pt-5">
-        <tr>
-            <th>Product</th>
-            <th>Quantity</th>
-            <th>Subtotal</th>
-        </tr>
-        <tr>
-            <td>
-                <div class="product-info">
-                    <img src="/Projrct1/assets/images/Product/macbook.png" alt="Macbook M1">
-                    <div>
-                        <p>Macbook M1</p>
-                        <small><span>$</span>690</small>
-                        <br>
-                        <a class="remove-btn" href="#">Remove</a>
-                    </div>
+
+
+    <!--Checkout Page-->
+    <section class="my-5 py-5">
+        <div class="container text-center mt-3 pt-5">
+            <h2 class="form-weigth-bold">Check out</h2>
+            <hr class="mx-auto">
+        </div>
+
+        <div class="mx-auto container">
+            <form id="checkout-form">
+                <div class="form-group checkout-small-element">
+                    <label>Name</label>
+                    <input type="text" class="form-control" id="checkout-name" name="name" placeholder="Name" required>
                 </div>
-            </td>
-            <td>
-                <input type="number" value="1" min="1">
-                <a class="edit-btn">Edit</a>
-            </td>
-            <td>
-                <span class="product-price">$690</span>
-            </td>
-        </tr>
-
-        <tr>
-            <td>
-                <div class="product-info">
-                    <img src="/Projrct1/assets/images/Product/macbook.png" alt="Macbook M1">
-                    <div>
-                        <p>Macbook M1</p>
-                        <small><span>$</span>690</small>
-                        <br>
-                        <a class="remove-btn" href="#">Remove</a>
-                    </div>
+                <div class="form-group checkout-small-element">
+                    <label>Email</label>
+                    <input type="text" class="form-control" id="checkout-email" name="email" placeholder="Email" required>
                 </div>
-            </td>
-            <td>
-                <input type="number" value="1" min="1">
-                <a class="edit-btn">Edit</a>
-            </td>
-            <td>
-                <span class="product-price">$690</span>
-            </td>
-        </tr>
-
-        <tr>
-            <td>
-                <div class="product-info">
-                    <img src="/Projrct1/assets/images/Product/macbook.png" alt="Macbook M1">
-                    <div>
-                        <p>Macbook M1</p>
-                        <small><span>$</span>690</small>
-                        <br>
-                        <a class="remove-btn" href="#">Remove</a>
-                    </div>
+                <div class="form-group checkout-small-element">
+                    <label>Phone</label>
+                    <input type="tel" class="form-control" id="checkout-phone" name="phone" placeholder="Phone" required>
                 </div>
-            </td>
-            <td>
-                <input type="number" value="1" min="1">
-                <a class="edit-btn">Edit</a>
-            </td>
-            <td>
-                <span class="product-price">$690</span>
-            </td>
-        </tr>
-    </table>
+                <div class="form-group checkout-small-element">
+                    <label>City</label>
+                    <input type="text" class="form-control" id="checkout-city" name="city" placeholder="City" required>
+                </div>
+                <div class="form-group checkout-large-element">
+                    <label>Address</label>
+                    <input type="text" class="form-control" id="checkout-address" name="address" placeholder="Address" required>
+                </div>
+                <div class="form-group checkout-btn-container">
+                    <input type="submit" class="btn" id="checkout-btn" value="Checkout">
+                </div>
+            </form>
+        </div>
+    </section> 
 
-    <!--Total-->
-    <div class="cart-total">
-        <table>
-            <tr>
-                <td>Subtotal</td>
-                <td>$690</td>
-            </tr>
-            <tr>
-                <td>Total</td>
-                <td>$690</td>
-            </tr>
-        </table>
-    </div>
-
-    <!--Checkout Button-->
-    <div class="checkout-container">
-        <button class="btn checkout-btn">CHECKOUT</button>
-    </div>
-
-    
-</section>
-
-        <!-- Footer -->
-      <footer id="contact">
+    <!-- Footer -->
+    <footer id="contact">
         <div class="container">
             <div class="footer-hr flex flex-col">
                 <div class="flex gap-1">
