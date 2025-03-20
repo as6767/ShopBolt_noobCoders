@@ -144,7 +144,7 @@ h5{
 }
 
 #home {
-    background-image: url("/Projrct1/assets/images/bg_0.jpg");
+    background-image: url("/assets/images/bg_0.jpg");
     background-size: cover;
     background-position: right center; /* Adjusted to show more of the woman */
     width: 100%;
@@ -317,7 +317,7 @@ h5{
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-image: url(/Projrct1/assets/images/banner.png);
+    background-image: url('/assets/images/banner.jpg');
     width: 105%;
     height: 40vh;
     background-size: cover;
