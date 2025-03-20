@@ -1,29 +1,15 @@
-document.addEventListener("DOMContentLoaded", () => {
-    const loginframe = document.querySelector('.loginframe');
-    const registerlink = document.querySelector('.registerlink');
-    const loginlink = document.querySelector('.loginlink');
-    const navbtnlogin = document.querySelector('.navbtnlogin');
-    const closeicon = document.querySelector('.closeicon');
+document.addEventListener("DOMContentLoaded", function () {
+    const loginframe = document.querySelector(".loginframe");
+    const registerLink = document.querySelector(".registerlink");
+    const loginLink = document.querySelector(".loginlink");
 
-    if (!loginframe || !registerlink || !loginlink || !navbtnlogin || !closeicon) {
-        console.error("One or more elements not found. Check class names.");
-        return;
-    }
-
-    navbtnlogin.addEventListener('click', () => {
-        loginframe.classList.add('show');  
-        loginframe.classList.remove('active'); 
+    registerLink.addEventListener("click", (e) => {
+        e.preventDefault();
+        loginframe.classList.add("active");
     });
 
-    registerlink.addEventListener('click', () => {
-        loginframe.classList.add('active');
-    });
-
-    loginlink.addEventListener('click', () => {
-        loginframe.classList.remove('active');
-    });
-
-    closeicon.addEventListener('click', () => {
-        loginframe.classList.remove('show');
+    loginLink.addEventListener("click", (e) => {
+        e.preventDefault();
+        loginframe.classList.remove("active");
     });
 });
