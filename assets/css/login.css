@@ -6,9 +6,9 @@
 }
 
 /* Container for the login and registration forms */
-.loginframe {
-    visibility: visible; /* Make it visible by default */
-    opacity: 1; /* Make it fully opaque by default */
+/* .loginframe {
+    visibility: visible; 
+    opacity: 1; 
     position: relative;
     width: 400px;
     height: 440px;
@@ -21,8 +21,52 @@
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    margin: 50px auto; /* Center the form on the page */
+    margin: 50px auto; 
+} */
+
+.loginframe {
+    visibility: visible;
+    opacity: 1;
+    position: relative;
+    width: 400px;
+    height: 440px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin: 50px auto;
 }
+
+/* Login form with background image */
+.form.login {
+    width: 100%;
+    padding: 40px;
+    transform: translateX(0);
+    transition: transform 0.3s ease;
+    background-image: url('/assets/images/bg.jpg');
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px;
+}
+
+/* Registration form with background image */
+.form.register {
+    position: absolute;
+    transform: translateX(400px);
+    transition: transform 0.3s ease;
+    width: 100%;
+    padding: 40px;
+    background-image: url('/assets/images/bg.jpg');
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px;
+}
+
 
 /* Login form styling */
 .loginframe .form.login {
@@ -75,7 +119,7 @@
     left: 10px;
     transform: translateY(-50%);
     font-size: 1em;
-    color: #162938;
+    color: #12232f;
     font-weight: 500;
     pointer-events: none;
     transition: 0.3s ease-in-out;
@@ -127,7 +171,7 @@
 /* Remember me and forgot password section */
 .rememberme-forgot {
     font-size: 0.9em;
-    color: #000000;
+    color: #ffffff;
     font-weight: 500;
     margin: -15px 0 15px;
     display: flex;
@@ -136,7 +180,7 @@
 }
 
 .rememberme-forgot label input {
-    accent-color: #4f3d3d;
+    accent-color: #706666;
     margin-right: 3px;
 }
 
@@ -171,14 +215,14 @@
 /* Register new account message */
 .registernewid {
     font-size: 0.9em;
-    color: #0a0a0a;
+    color: #ffffff;
     text-align: center;
     font-weight: 500;
     margin: 25px 0 10px;
 }
 
 .registernewid p a {
-    color: #522ead;
+    color: rgb(55, 255, 255);
     text-decoration: none;
     font-weight: 600;
 }
