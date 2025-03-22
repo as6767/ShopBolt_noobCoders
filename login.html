@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,7 +11,7 @@
     <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/easy.css">
-    <link rel="stylesheet" href="assets/css/login.css">
+    <link rel="stylesheet" href="/assets/css/login.css">
     <!-- <link rel="stylesheet" href="/Projrct1/assets/css/login.css"> -->
 </head>
 <body>
@@ -37,12 +39,12 @@
             <form action="#">
                 <div class="logininput">
                     <span class="icon"><ion-icon name="mail"></ion-icon></span>
-                    <input type="email" id="email" placeholder=" " required>
+                    <input type="email" id="email" placeholder=" " required name="email">
                     <label>Email</label>
                 </div>
                 <div class="logininput">
                     <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
-                    <input type="password" id="password" placeholder=" " required>
+                    <input type="password" id="password" placeholder=" " required name="password">
                     <label>Password</label>
                 </div>
                 <div class="rememberme-forgot">
@@ -59,20 +61,20 @@
         <!-- Registration Form -->
         <div class="form register">
             <h2>Registration</h2>
-            <form action="#">
+            <form action= "/server/connection.php" method="POST">
                 <div class="logininput">
                     <span class="icon"><ion-icon name="person"></ion-icon></span>
-                    <input type="text" id="text" placeholder=" " required>
+                    <input type="text" id="text" placeholder=" " required name="username">
                     <label>Username</label>
                 </div>
                 <div class="logininput">
                     <span class="icon"><ion-icon name="mail"></ion-icon></span>
-                    <input type="email" id="email" placeholder=" " required>
+                    <input type="email" id="email" placeholder=" " required name="email">
                     <label>Email</label>
                 </div>
                 <div class="logininput">
                     <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
-                    <input type="password" id="password" placeholder=" " required>
+                    <input type="password" id="password" placeholder=" " required name="password">
                     <label>Password</label>
                 </div>
                 <div class="rememberme-forgot">
@@ -88,7 +90,7 @@
         </div>
     </div>
 
-    <script src="/assets/js/script.js"></script>
+    <script src="assets/js/script.js"></script>
 
 
 
