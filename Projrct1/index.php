@@ -70,7 +70,7 @@
 
       <header>
         <nav class="navbar">
-            <a href="/Projrct1/home.html">Home</a>
+            <a href="/Projrct1/index.html">Home</a>
             <a href="about.html">About</a>
 
             <a href="service.html">Services</a>
@@ -81,7 +81,7 @@
             <a href="account.html">Account</a>
             <a href="cart.html">Cart</a>
         </nav>
-        <a href="home.html" class="nav_logo">
+        <a href="index.html" class="nav_logo">
           <img src="/Projrct1/assets/images/logo.png" alt="Logo">
         </a>
       </header> 
@@ -140,97 +140,30 @@
       <section id="product1" class="section-p1">
         <h2>Feature Product </h2>
         <p>Our Last Stock , Please Check it out !</p>
+
         <div class="pro-container">
-          <div class="pro">
-            <img src="/Projrct1/assets/images/Product/Camera Full set.jpg" alt="">
-            <div class="des">
-              <span>Camera Full Set</span>
-              <h5>Camera + Headphone For First 5 People</h5>
-              <div class="star">
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-half"></i>
-                <i class="bi bi-star"></i>
-              </div>
+  <?php include('server/get_featured_products.php'); ?>
 
-              <h4>$300</h4>
-            </div>
-            <a href="#"><i class="bi bi-cart cart"></i></a>
-          </div>
-
-          <div class="pro">
-            <img src="/Projrct1/assets/images/Product/drone.png" alt="">
-            <div class="des">
-              <span>Drone AX RoX Series 1</span>
-              <h5>Full Set Of Drone Camera </h5>
-              <div class="star">
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-half"></i>
-              </div>
-
-              <h4>$990</h4>
-            </div>
-            <a href="#"><i class="bi bi-cart cart"></i></a>
-          </div>
-
-          <div class="pro">
-            <img src="/Projrct1/assets/images/Product/book.png" alt="">
-            <div class="des">
-              <span>The Coffee Guide</span>
-              <h5>KNOW ABOUT ALL OF COFFEE </h5>
-              <div class="star">
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-half"></i>
-              </div>
-
-              <h4>$10</h4>
-            </div>
-            <a href="#"><i class="bi bi-cart cart"></i></a>
-          </div>
-
-          <div class="pro">
-            <img src="/Projrct1/assets/images/Product/homeTheater.png" alt="">
-            <div class="des">
-              <span>Home Theater 2:1 </span>
-              <h5>JBL 500 db Home Set UP </h5>
-              <div class="star">
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-half"></i>
-              </div>
-
-              <h4>$490</h4>
-            </div>
-            <a href="#"><i class="bi bi-cart cart"></i></a>
-          </div>
-
-          <div class="pro">
-            <img src="/Projrct1/assets/images/Product/macbook.png" alt="">
-            <div class="des">
-              <span>MACBOOK M1</span>
-              <h5>JBL Headphone Free</h5>
-              <div class="star">
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-half"></i>
-              </div>
-
-              <h4>$690</h4>
-            </div>
-            <a href="#"><i class="bi bi-cart cart"></i></a>
-          </div>
+  <?php while ($row = $featured_products->fetch_assoc()) { ?>
+    <div class="pro">
+      <img src="/Projrct1/assets/images/Product/Camera Full set.jpg" alt="">
+      <div class="des">
+        <span>Camera Full Set</span>
+        <h5>Camera + Headphone For First 5 People</h5>
+        <div class="star">
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-half"></i>
+          <i class="bi bi-star"></i>
         </div>
+        <h4>$300</h4>
+      </div>
+      <a href="#"><i class="bi bi-cart cart"></i></a>
+    </div>
+  <?php } ?>
+</div>
+
       </section>
 
         <!--END Product Section-->
