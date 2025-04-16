@@ -25,7 +25,7 @@
             <a href="about.html">About</a>
 
             <a href="service.html">Services</a>
-            <a href="shop.html">Shop</a>
+            <a href="shop.php">Shop</a>
 
             <a href="contact.html">Contact</a>
             <a href="login.html">Sign In</a>

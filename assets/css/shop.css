@@ -1,0 +1,91 @@
+.search-section {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+.price-range {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.price-range input {
+    width: 80px;
+}
+.category-list {
+    list-style: none;
+    padding-left: 0;
+}
+.category-list li {
+    margin-bottom: 8px;
+}
+.category-list li a {
+    text-decoration: none;
+    color: #333;
+}
+.category-list li a:hover {
+    color: #0d6efd;
+}
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+.product-card {
+            transition: all 0.3s;
+            margin-bottom: 30px;
+            border: 1px solid #eee;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .sale {
+            background: #ff523b;
+            color: white;
+            padding: 3px 10px;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            border-radius: 3px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+        .filter-section {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        .price-range-slider {
+            width: 100%;
+        }
+        .pagination .page-item.active .page-link {
+            background-color: #ff523b;
+            border-color: #ff523b;
+        }
+        .pagination .page-link {
+            color: #ff523b;
+        }
+        .product-img {
+            height: 200px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #f9f9f9;
+        }
+        .product-img img {
+            max-height: 100%;
+            max-width: 100%;
+            object-fit: contain;
+        }
+        .product-info {
+            padding: 15px;
+        }
+        .rating {
+            color: #ffc107;
+            margin: 8px 0;
+        }
