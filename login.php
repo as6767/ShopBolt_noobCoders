@@ -2,7 +2,12 @@
 session_start();
 include("db_connect/db_connect.php"); 
 
+if (isset($_SESSION['logged_in'])) {
+    header("Location: account.php");
+    exit();
+}
 
+// Registration
 if (isset($_POST['register'])) {
     $username = trim($_POST['username']);
     $email = trim($_POST['email']);
@@ -24,7 +29,7 @@ if (isset($_POST['register'])) {
     $stmt->bind_param("sss", $username, $email, $hashed_password);
 
     if ($stmt->execute()) {
-        echo "Registration Successful!";
+        // success - redirect to login
         header("Location: login.html");
         exit();
     } else {
@@ -34,7 +39,7 @@ if (isset($_POST['register'])) {
     $stmt->close();
 }
 
-
+// Login
 if (isset($_POST['login'])) {
     $email = trim($_POST['email']);
     $password = trim($_POST['password']);
@@ -43,7 +48,7 @@ if (isset($_POST['login'])) {
         die("All fields are required!");
     }
 
-    $sql = "SELECT id, password FROM users WHERE email = ?";
+    $sql = "SELECT id, username, email, password FROM users WHERE email = ?";
     $stmt = $conn->prepare($sql);
 
     if (!$stmt) {
@@ -55,15 +60,19 @@ if (isset($_POST['login'])) {
     $result = $stmt->get_result();
 
     if ($result->num_rows > 0) {
-        $row = $result->fetch_assoc();
-        if (password_verify($password, $row['password'])) {
-            $_SESSION['user_id'] = $row['id'];
-            echo "Login Successful!";
-            header("Location: index.html");
+        $user = $result->fetch_assoc();
+
+        if (password_verify($password, $user['password'])) {
+            // ✅ Set all required session values
+            $_SESSION['user_id'] = $user['id'];
+            $_SESSION['username'] = $user['username'];
+            $_SESSION['email'] = $user['email'];
+            $_SESSION['logged_in'] = true;
+
+            header("Location: account.php");
             exit();
-            
         } else {
-            echo "Invalid Password!";
+            echo "Invalid password!";
         }
     } else {
         echo "No user found!";
@@ -74,3 +83,4 @@ if (isset($_POST['login'])) {
 
 $conn->close();
 ?>
+

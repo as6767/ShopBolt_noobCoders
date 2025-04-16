@@ -29,8 +29,6 @@
 
             <a href="contact.html">Contact</a>
             <a href="login.html">Sign In</a>
-            <a href="account.html">Account</a>
-            <a href="cart.html">Cart</a>
         </nav>
         <a href="index.html" class="nav_logo">
           <img src="assets/images/logo.png" alt="Logo">
