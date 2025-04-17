@@ -6,7 +6,7 @@ include("db_connect/db_connect.php");
 if (isset($_GET['logout'])) {
     session_unset();
     session_destroy();
-    header("Location: login.html");
+    header("Location: login.php");
     exit();
 }
 
