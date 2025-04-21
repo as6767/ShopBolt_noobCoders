@@ -34,6 +34,36 @@
 
     <!--Checkout Page-->
     <section class="my-5 py-5">
+        <div class="mx-auto container mt-5">
+            <h4>Order Summary</h4>
+            <div class="border p-3 rounded">
+              <table class="table">
+                <tr>
+                  <td>Subtotal:</td>
+                  <td id="cart-subtotal">$0.00</td>
+                </tr>
+                <tr>
+                  <td>Shipping:</td>
+                  <td id="shipping-fee">$10.00</td>
+                </tr>
+                <tr>
+                  <td>
+                    Coupon Code:
+                    <input type="text" id="coupon-code" class="form-control mt-2" placeholder="Enter coupon (e.g. Shopbolt)">
+                  </td>
+                  <td>
+                    <button type="button" id="apply-coupon" class="btn btn-sm btn-primary mt-4">Apply</button>
+                    <div id="coupon-message" class="mt-2"></div>
+                  </td>
+                </tr>
+                <tr class="fw-bold">
+                  <td>Total:</td>
+                  <td id="cart-total">$0.00</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+          
         <div class="container text-center mt-3 pt-5">
             <h2 class="form-weigth-bold">Check out</h2>
             <hr class="mx-auto">
@@ -153,7 +183,96 @@
       <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-whGJZ8Iq3uPB4VyCMFSTOKR3pJ5ZFL9XKFlHyLtvEYpD6c3dM6spJot49LMB0WTR" crossorigin="anonymous"></script>
       <script src="/assets/js/script.js"></script> 
-
+      <script>
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+        const shippingFee = 10.00;
+        const validCouponCode = "SHOPBOLT";
+        const discountRate = 0.10;
+        let isCouponApplied = false;
+      
+        function calculateTotals(applyDiscount = false) {
+          let subtotal = 0;
+          cart.forEach(item => {
+            const price = parseFloat(item.price.replace('$', '')) || 0;
+            subtotal += price * item.quantity;
+          });
+      
+          const discount = applyDiscount ? subtotal * discountRate : 0;
+          const total = subtotal - discount + shippingFee;
+      
+          document.getElementById("cart-subtotal").textContent = `$${subtotal.toFixed(2)}`;
+          document.getElementById("shipping-fee").textContent = `$${shippingFee.toFixed(2)}`;
+          document.getElementById("cart-total").textContent = `$${total.toFixed(2)}`;
+        }
+      
+        document.getElementById("apply-coupon").addEventListener("click", () => {
+          const code = document.getElementById("coupon-code").value.trim().toUpperCase();
+          const messageEl = document.getElementById("coupon-message");
+      
+          if (code === validCouponCode) {
+            isCouponApplied = true;
+            calculateTotals(true);
+            messageEl.textContent = "Coupon applied! You saved 10%.";
+            messageEl.className = "text-success";
+          } else {
+            isCouponApplied = false;
+            calculateTotals(false);
+            messageEl.textContent = "Invalid coupon code.";
+            messageEl.className = "text-danger";
+          }
+        });
+      
+        // Initial calculation on page load
+        calculateTotals(false);
+      
+        // Handle Checkout Form Submission
+        document.getElementById("checkout-form").addEventListener("submit", function(e) {
+          e.preventDefault(); // Prevent default form submission
+      
+          // Show thank you popup
+          const popup = document.createElement("div");
+          popup.id = "thank-you-popup";
+          popup.innerHTML = `
+            <div class="popup-content text-center">
+              <h3>🎉 Thank you for your order!</h3>
+              <p>Redirecting to Home page...</p>
+            </div>
+          `;
+          document.body.appendChild(popup);
+      
+          // Add some style
+          document.head.insertAdjacentHTML("beforeend", `
+            <style>
+              #thank-you-popup {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100vw;
+                height: 100vh;
+                background: rgba(0, 0, 0, 0.7);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                z-index: 9999;
+              }
+              .popup-content {
+                background: white;
+                padding: 40px 30px;
+                border-radius: 10px;
+                box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+              }
+            </style>
+          `);
+      
+          // Clear cart
+          localStorage.removeItem("cart");
+    
+          setTimeout(() => {
+            window.location.href = "index.php";
+          }, 1000);
+        });
+      </script>
+           
     
 </body>
 </html>

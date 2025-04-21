@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Product Management</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>Admin Product Management</h1>
+    </header>
+
+    <!-- Create Product Form -->
+    <div id="createProductForm">
+        <h2>Create New Product</h2>
+        <form id="productForm" onsubmit="createProduct(event)">
+            <label for="name">Product Name</label>
+            <input type="text" id="name" required>
+
+            <label for="description">Description</label>
+            <textarea id="description" required></textarea>
+
+            <label for="price">Price</label>
+            <input type="number" id="price" required>
+
+            <label for="category">Category</label>
+            <input type="text" id="category" required>
+
+            <label for="stock">Stock</label>
+            <input type="number" id="stock" required>
+
+            <!-- Removed Image input -->
+            <button type="submit">Create Product</button>
+        </form>
+    </div>
+
+    <!-- Product List View -->
+    <div id="productList">
+        <h2>Product List</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>Category</th>
+                    <th>Stock</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="productTableBody">
+                <!-- Product rows will go here -->
+            </tbody>
+        </table>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
+
