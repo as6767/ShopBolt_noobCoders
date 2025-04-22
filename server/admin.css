@@ -1,78 +1,102 @@
-/* styles.css */
-
 body {
+    margin: 0;
     font-family: Arial, sans-serif;
-    margin: 0;
+  }
+  
+  .container {
+    display: flex;
+    height: 100vh;
+  }
+  
+  .sidebar {
+    width: 240px;
+    background-color: #1c2d41;
+    color: white;
+    padding: 20px;
+  }
+  
+  .sidebar h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .sidebar ul {
+    list-style: none;
     padding: 0;
-    background-color: #f4f4f4;
-}
-
-header {
-    background-color: #333;
-    color: white;
-    padding: 20px;
-    text-align: center;
-}
-
-h1 {
-    margin: 0;
-}
-
-#productList {
-    margin: 20px;
-    padding: 20px;
-    background-color: white;
-    border-radius: 8px;
-}
-
-table {
+  }
+  
+  .sidebar li {
+    margin-bottom: 15px;
+  }
+  
+  .sidebar button {
     width: 100%;
-    border-collapse: collapse;
-}
-
-th, td {
-    padding: 12px;
-    text-align: left;
-}
-
-th {
-    background-color: #333;
+    padding: 10px;
+    background-color: #357edd;
     color: white;
-}
-
-button {
-    padding: 6px 12px;
-    margin: 4px;
-    cursor: pointer;
     border: none;
     border-radius: 4px;
-    background-color: #28a745;
-    color: white;
-}
-
-button:hover {
-    background-color: #218838;
-}
-
-#productForm {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    width: 300px;
-    margin: 20px;
-    background-color: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-input, textarea {
-    padding: 8px;
-    font-size: 14px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .main-content {
+    flex-grow: 1;
+    padding: 30px;
+    background-color: #f9f9f9;
+    overflow-y: auto;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  form input,
+  form textarea {
+    display: block;
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
-}
+  }
+  
+  form button {
+    padding: 10px 20px;
+    background-color: #357edd;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  th,
+  td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+  }
+  
+  table button {
+    padding: 5px 10px;
+    margin-right: 5px;
+    background-color: #357edd;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  
+  
 
-input[type="file"] {
-    padding: 4px;
-}
+
+
+
+
