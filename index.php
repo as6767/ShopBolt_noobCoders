@@ -14,19 +14,13 @@
     <!-- <link rel="stylesheet" href="/Projrct1/assets/css/login.css"> -->
 </head>
 <body>
-    
-
-   
       <!-- New Nav-->
 
       <header>
         <nav class="navbar">
             <a href="index.php">Home</a>
             <a href="about.html">About</a>
-
-            <a href="service.html">Services</a>
             <a href="shop.html">Shop</a>
-
             <a href="contact.html">Contact</a>
             <a href="login.php">Sign In</a>
             <a href="account.php">Account</a>
